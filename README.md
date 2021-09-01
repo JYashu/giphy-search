@@ -1,2 +1,2 @@
 # giphy-search
-A very simple Giphy Search Engine that utilizes Giphy API to search for gifs related to the keywords entered.
+A very simple giphy search engine, utilizes Giphy API to search Giphy server and fetch gifs related to the keywords entered.
