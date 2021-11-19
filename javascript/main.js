@@ -24,9 +24,9 @@ GiphyAPI.getGif = function (response) {
         let link = image.source_post_url;
         container.innerHTML += "<li class='container-image'>" +
             "<div class='links-wrap'><ul class='link-list'>" +
-            "<li class='link'><div class='link-holder'><a href='" + image.url + "' target='new'>Open Giphy</a></div></li>" +
-            "<li class='link'><div class='link-holder'><a href='" + link + "' target='new'>Open Source</a></div></li></ul></div>" +
-            "<a href='" + image.embed_url + "' target='new'><img src='" + src + "' class='image' /></a></li>";
+            "<li class='link'><div class='link-holder'><a href='" + image.url + "' target='_blank'>Open Giphy</a></div></li>" +
+            "<li class='link'><div class='link-holder'><a href='" + link + "' target='_blank'>Open Source</a></div></li></ul></div>" +
+            "<a href='" + image.embed_url + "' target='_blank'><img src='" + src + "' class='image' /></a></li>";
     });
 }
 UI.handleEnterKey = function () {
