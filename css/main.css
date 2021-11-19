@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-.container-padding50 {
-    padding-top: 50px;
-}
-
 .header {
     display: flex;
     height: 60px;
@@ -14,7 +10,6 @@
 
 .main {
     width: 80%;
-    max-width: 1024px;
     margin: 0 auto;
     overflow: auto;
 }
@@ -76,17 +71,101 @@
 
 .js-result {
     width: 100%;
+    padding-top: 50px;
     overflow: auto;
+}
+
+.queries {
+    list-style-type: none;
+
 }
 
 .container-image {
     float: left;
-    width: 25%;
-    height: 175px;
+    width: 20%;
     padding: 5px;
+    margin: 0;
+    transition: width 250ms;
 }
 
-@media (max-width: 1005px)and(min-width: 670px) {
+.image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 175px;
+}
+
+.links-wrap {
+    visibility: hidden;
+    opacity: 0.7;
+    position: absolute;
+    background: black;
+    height: 175px;
+    width: 14.4%;
+    z-index: 1;
+}
+
+.link-list {
+    list-style-type: none;
+    padding: 10%;
+}
+
+.link-holder {
+    width: 6em;
+    height: 1.5em;
+    border: 1px solid white;
+    padding-top: 2px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.link {
+    margin: 25px 0 20px 30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 0.7;}
+}
+
+.container-image:hover .links-wrap {
+    visibility: visible;
+    opacity: 0.7;
+    animation-name: example;
+    animation-duration: 500ms;
+}
+
+@media (max-width: 1263px) and (min-width: 1160px) {
+
+    .link {
+        margin: 25px 0 10px 24px;
+    }
+
+    .links-wrap {
+        width: 14.2%;
+    }
+}
+
+@media (max-width: 1160px) and (min-width: 1005px) {
+    .container-image {
+        width: 25%;
+    }
+
+    .links-wrap {
+        width: 17.8%;
+    }
+
+    .link {
+        margin: 25px 0 10px 28px;
+    }
+}
+
+@media (max-width: 1005px) and (min-width: 900px) {
     .container-image {
         width: 33.33%;
     }
@@ -94,15 +173,121 @@
     .main {
         width: 90%;
     }
+
+    .links-wrap {
+        width: 27%;
+    }
+
+    .link {
+        margin: 25px 0 10px 60px;
+    }
 }
 
-@media (max-width: 670px)and(min-width: 480px) {
+@media (max-width: 900px) and (min-width: 820px) {
+    .container-image {
+        width: 33.33%;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .links-wrap {
+        width: 26.5%;
+    }
+
+    .link {
+        margin: 25px 0 10px 44px;
+    }
+}
+
+@media (max-width: 820px) and (min-width: 781px) {
+    .container-image {
+        width: 33.33%;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .links-wrap {
+        width: 26.4%;
+    }
+
+    .link {
+        margin: 25px 0 10px 40px;
+    }
+}
+
+@media (max-width: 781px) and (min-width: 670px) {
+    .container-image {
+        width: 33.33%;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .links-wrap {
+        width: 25.8%;
+    }
+
+    .link {
+        margin: 25px 0 10px 28px;
+    }
+}
+
+@media (max-width: 670px) and (min-width: 600px) {
     .container-image {
         width: 50%;
     }
 
     .main {
         width: 95%;
+    }
+
+    .links-wrap {
+        width: 41.2%;
+    }
+
+    .link {
+        margin: 25px 0 10px 58px;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 500px) {
+    .container-image {
+        width: 50%;
+    }
+
+    .main {
+        width: 95%;
+    }
+
+    .links-wrap {
+        width: 40.4%;
+    }
+
+    .link {
+        margin: 25px 0 10px 40px;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 480px) {
+    .container-image {
+        width: 50%;
+    }
+
+    .main {
+        width: 95%;
+    }
+
+    .links-wrap {
+        width: 39.7%;
+    }
+
+    .link {
+        margin: 25px 0 10px 40px;
     }
 }
 
