@@ -15,13 +15,18 @@ GiphyAPI.init = function (searchQuery) {
 GiphyAPI.getGif = function (response) {
     response = JSON.parse(response);
     let images = response.data;
-    let container = document.querySelector('.js-result');
-    let queries = document.querySelector('.query-size');
+    let container = document.querySelector('.queries');
+    let links = document.querySelector('.links-wrap');
     container.innerHTML = "";
-    queries.innerHTML = "";
+    console.log(images[0]);
     images.forEach(function (image) {
         let src = image.images.fixed_height_downsampled.url;
-        container.innerHTML += "<img src='" + src + "' class='container-image' />";
+        let link = image.source_post_url;
+        container.innerHTML += "<li class='container-image'>" +
+            "<div class='links-wrap'><ul class='link-list'>" +
+            "<li class='link'><div class='link-holder'><a href='" + image.url + "' target='new'>Open Giphy</a></div></li>" +
+            "<li class='link'><div class='link-holder'><a href='" + link + "' target='new'>Open Source</a></div></li></ul></div>" +
+            "<a href='" + image.embed_url + "' target='new'><img src='" + src + "' class='image' /></a></li>";
     });
 }
 UI.handleEnterKey = function () {
@@ -37,5 +42,6 @@ UI.handleSubmitButton = function () {
         }
     });
 }
+
 UI.handleEnterKey();
 UI.handleSubmitButton();
